@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { config } from '../../../data';
+import favicon from '../../../static/favicons/bear.jpg';
 
 const Head = () => (
   <Helmet defaultTitle={config.title} titleTemplate={`%s | ${config.title}`}>
@@ -22,7 +23,8 @@ const Head = () => (
     <link
       rel="shortcut icon"
       href={
-        config.meta.favicon
+        favicon
+        || config.meta.favicon
         || 'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png'
       }
     />
